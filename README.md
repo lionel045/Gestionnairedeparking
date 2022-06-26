@@ -1,6 +1,6 @@
 # Projet_Isitech
 
-Avant de lançer l'application vous devez possédez un serveur MySql ou sera stocké les tables que vous devrez importez ("Base de donnée à importer") 
+Avant de lançer l'application vous devez possédez un serveur MySql ou sera stocké les tables que vous devrez importez ("BddImport") 
 
 - Bien vérifié que le serveur Wamp est démarrez 
 
