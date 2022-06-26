@@ -542,7 +542,7 @@ private: System::Void lb_pseudoCo_Click(System::Object^ sender, System::EventArg
 			{
 				a.Saisiimmac(immatriculation, recupererid); // Recupère la plaque d'immatriculation en bdd
 
-				int querystate = ab.AjouteraHistoriqueArrive(recupererid, recupererIDplace);
+				int querystate = ab.AjouteraHistoriqueArrive(recupererid, recupererIDplace); // Ajout une historique à la table d'arrivé
 				if (querystate == 0)
 				{
 
@@ -550,7 +550,7 @@ private: System::Void lb_pseudoCo_Click(System::Object^ sender, System::EventArg
 				}
 				else
 				{
-					lb_info->Text = "Echec de la methode" + recupererIDplace;
+					lb_info->Text = "Echec de l'ajout";
 				}
 	       	lb_reservation->Text = "Vous avez réservé la place " + element; // Récupère la place réserver
 
@@ -590,7 +590,7 @@ private: System::Void LinkDeco_LinkClicked(System::Object^ sender, System::Windo
 private: System::Void btn_Free_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	Parkingbdd a;
-	a.AjoutHistoriqueSortie(recupererIDplace);
+	a.AjoutHistoriqueSortie(recupererIDplace); // Met à jour la table historique et ajoute une date de sortie
 	a.renitialiserplace(recupererIDplace,recupererid); // Renitialise la place de parking et renvoie la table à null
 	recupererIDplace = "";
 	Placecombo->Enabled = true; // Déverouille la selection de la place afin que l'utilisateur puisse à nous réserver une place
